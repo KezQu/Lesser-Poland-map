@@ -1,0 +1,6 @@
+D:\Programming\Java\BazyDanych2\PolandMapDLL\bin\Debug\PolandMapDLL.dll
+D:\Programming\Java\BazyDanych2\PolandMapDLL\bin\Debug\PolandMapDLL.pdb
+D:\Programming\Java\BazyDanych2\PolandMapDLL\obj\Debug\PolandMapDLL.csproj.AssemblyReference.cache
+D:\Programming\Java\BazyDanych2\PolandMapDLL\obj\Debug\PolandMapDLL.csproj.CoreCompileInputs.cache
+D:\Programming\Java\BazyDanych2\PolandMapDLL\obj\Debug\PolandMapDLL.dll
+D:\Programming\Java\BazyDanych2\PolandMapDLL\obj\Debug\PolandMapDLL.pdb

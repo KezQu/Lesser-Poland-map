@@ -1,0 +1,12 @@
+D:\Programming\Java\BazyDanych2\PolandMapDLL\obj\Release\MalopolskaMap.csproj.AssemblyReference.cache
+D:\Programming\Java\BazyDanych2\PolandMapDLL\obj\Release\MalopolskaMap.csproj.CoreCompileInputs.cache
+D:\Programming\Java\BazyDanych2\PolandMapDLL\bin\Release\MalopolskaMap.pdb
+D:\Programming\Java\BazyDanych2\PolandMapDLL\obj\Release\MalopolskaMap.pdb
+D:\Programming\Java\BazyDanych2\PolandMapDLL\bin\Release\MalopolskaMap.dll
+D:\Programming\Java\BazyDanych2\PolandMapDLL\obj\Release\MalopolskaMap.dll
+D:\Programming\Java\BazyDanych2\MalopolskaMapDLL\bin\Release\MalopolskaMap.pdb
+D:\Programming\Java\BazyDanych2\MalopolskaMapDLL\obj\Release\MalopolskaMap.csproj.AssemblyReference.cache
+D:\Programming\Java\BazyDanych2\MalopolskaMapDLL\obj\Release\MalopolskaMap.csproj.CoreCompileInputs.cache
+D:\Programming\Java\BazyDanych2\MalopolskaMapDLL\obj\Release\MalopolskaMap.pdb
+D:\Programming\Java\BazyDanych2\MalopolskaMapDLL\bin\Release\MalopolskaMap.dll
+D:\Programming\Java\BazyDanych2\MalopolskaMapDLL\obj\Release\MalopolskaMap.dll

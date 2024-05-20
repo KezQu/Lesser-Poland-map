@@ -1,3 +1,9 @@
+*.osm
+*.osm.pbf
+config.txt
+Configurer
+filtering_tags.txt
+
 # Compiled class file
 *.class
 

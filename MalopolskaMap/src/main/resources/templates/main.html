@@ -1,0 +1,53 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-4.dtd">
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8">
+	<title>Map of Lesser Poland</title>
+	<link th:href="@{/css/apperance.css}" href="../static/css/apperance.css" rel="stylesheet">
+</head>
+<body onload="loadVoivodeship()" onresize="resizeCanvasToFit()" onmousemove="checkMouseCoords()" xmlns="http://www.w3.org/2000/svg">
+<h1 class="title text">Map of Lesser Poland</h1>
+<div class="main" id="main">
+	<div class="lookup_menu" id="details" th:style="${menu_style}">
+		<h2 class="subtitle text">Details</h2>
+		<div class="details">
+			<table style="width: 100%;">
+				<tbody id="details_info">
+				</tbody>
+			</table>
+		</div>
+		<p class="text" id="mouseCoords"></p>
+	</div>
+	<div id="map_context" style="border: 1px solid #DCE0D9;">
+		<canvas id="draw_map" class="bg_map" th:attr="onclick=${verified != null ? 'processMouseClick(event)' : null}"></canvas>
+		<div class="login_box" th:style="${user_logged_in}">
+			<form class="login_form" th:action="@{${auth_form_action}}" method="post">
+				<input type="hidden" name="_csrf" value="B8ZvdL-a26NYLn2edHVn8t_Tj3PVaz-7UXbOxB-7QutibappYaNZRoii6ZR1TE79TFhTlO_qokvjCQyWNBX78yqMJo8GXZ9d">
+				<div><input class="login_input insert text" type="text" name="username" placeholder="Email" /></div>
+				<div><input class="login_input insert text" type="password" name="password" placeholder="Password" /></div>
+				<div><input class="login_input button text" type="submit" th:value="${auth_form_submit_value}" /></div>
+			</form>
+			<div th:style="${account_create_style}">
+				<span class="text" style="font-size:small;">Doesn't have an account?</span>
+				<a class="text" style="font-size:small;" th:href="@{/register}">Create an account</a>
+			</div>
+		</div>
+	</div>
+	<div class="lookup_menu"  id="history" th:style="${menu_style}">
+		<h2 class="subtitle text">History</h2>
+		<div class="history">
+			<table style="width: 100%;">
+				<tbody>
+					<tr th:each="histRecord: ${history}"></tr>
+				</tbody>
+			</table>
+		</div>
+		<form class="login_form" th:action="@{/logout}" method="post">
+			<div><input class="login_input button text" type="submit" value="log out"/></div>
+		</form>
+	</div>
+</div>
+<script th:src="@{/js/client.js}" src="../static/js/client.js"></script>
+</body>
+</html>
