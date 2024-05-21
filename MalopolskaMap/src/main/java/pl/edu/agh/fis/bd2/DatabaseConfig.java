@@ -8,9 +8,16 @@ import org.springframework.jdbc.datasource.DriverManagerDataSource;
 
 import javax.sql.DataSource;
 
+/**
+ * Class providing tools and properties to connect to MSSQL Server database
+ */
 @Configuration
 @EnableJdbcRepositories
 public class DatabaseConfig extends AbstractJdbcConfiguration {
+	/**
+	 * Method providing source of connection properties as well as JDBC driver manager
+	 * @return Data source providing tools to create connections to the database
+	 */
 	@Bean
 	public static DataSource dataSource(){
 		DriverManagerDataSource dataSource = new DriverManagerDataSource();

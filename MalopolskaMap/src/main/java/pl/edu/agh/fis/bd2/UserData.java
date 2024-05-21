@@ -8,10 +8,14 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+/**
+ * Class providing mapping of user credentials from MSSQL Server database to spring boot application
+ */
 public class UserData implements Serializable {
 	private String email;
 	private String password;
 	private List<String> roles;
+
 
 	public String getEmail() {
 		return email;
@@ -42,6 +46,11 @@ public class UserData implements Serializable {
 	public void setRoles(String[] roles) {
 		this.roles = Arrays.asList(roles);
 	}
+
+	/**
+	 * Extractor providing mechanims to retreive user data from MSSQL Server query
+	 * @return Extractor
+	 */
 	public static ResultSetExtractor<List<UserData>> GetExtractor(){
 		return (ResultSet rs) ->{
 			List<UserData> userList = new ArrayList<>();

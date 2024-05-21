@@ -11,7 +11,9 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
-
+/**
+ * Class providing mapping of administrative area from MSSQL Server database to spring boot application
+ */
 public class Area implements Serializable {
 	private String areaName;
 	private String areaNamePrefix;
@@ -20,6 +22,15 @@ public class Area implements Serializable {
 	private Point center = new Point(0,0);
 
 	public Area(){}
+
+	/**
+	 * Creates area from provided data
+	 * @param name Name of the area
+	 * @param namePrefix Name prefix of the area
+	 * @param population Population in the area
+	 * @param borderPoly Border of a created area
+	 * @param center Administrative center of the area
+	 */
 	public Area(String name, String namePrefix, int population, Polygon borderPoly, Point center){
 		this.areaName = name;
 		this.areaNamePrefix = namePrefix;
@@ -27,6 +38,13 @@ public class Area implements Serializable {
 		this.borderPolygon = borderPoly;
 		this.center = center;
 	}
+
+	/**
+	 * Creates area from provided name and accuracy of a border
+	 * @param conn Connection to the database from which to retrieve data
+	 * @param AreaName Name of the desired area
+	 * @param accuracy Accuracy of the border
+	 */
 	public Area(JdbcClient conn, String AreaName, int accuracy) {
 		Area a = conn.sql("""
 				SELECT * FROM dbo.AreaWithRescaledPolygon() WHERE name LIKE '"""
@@ -37,15 +55,10 @@ public class Area implements Serializable {
 		this.borderPolygon = a.borderPolygon;
 		this.center = a.center;
 	}
-	public Point CalculateCenter(){
-		double cx = 0,cy = 0;
-		for (int i = 0; i < borderPolygon.getPoints().size();){
-				cx += borderPolygon.getPoints().get(i).getX();
-				cy += borderPolygon.getPoints().get(i).getY();
-				i++;
-			}
-		return new Point(cx / borderPolygon.getPoints().size(), cy / borderPolygon.getPoints().size());
-	}
+	/**
+	 * Extractor providing mechanims to retreive area data from MSSQL Server query
+	 * @return Extractor
+	 */
 	public static ResultSetExtractor<List<Area>> GetExtractor(){
 		return (ResultSet rs) ->{
 			List<Area> areaList = new ArrayList<>();
@@ -55,6 +68,10 @@ public class Area implements Serializable {
 			return areaList;
 		};
 	}
+	/**
+	 * Method providing tools to retreive area data form single record
+	 * @return retreived administrative area
+	 */
 	private static Area AreaParser(ResultSet rs){
 		try{
 			Area area = new Area();
@@ -68,43 +85,33 @@ public class Area implements Serializable {
 			throw new RuntimeException("Unable to create map of malopolska " + e.getMessage() + " " + e.getCause());
 		}
 	}
-
 	public void setAreaName(String name) {
 		this.areaName = name;
 	}
-
 	public void setAreaNamePrefix(String areaNamePrefix) {
 		this.areaNamePrefix = areaNamePrefix;
 	}
-
 	public void setPopulation(int population) {
 		this.population = population;
 	}
-
 	public void setBorderPolygon(Polygon borderPolygon) {
 		this.borderPolygon = borderPolygon;
 	}
-
 	public void setCenter(Point center) {
 		this.center = center;
 	}
-
 	public String getAreaName() {
 		return areaName;
 	}
-
 	public String getAreaNamePrefix() {
 		return areaNamePrefix;
 	}
-
 	public int getPopulation() {
 		return population;
 	}
-
 	public Polygon getBorderPolygon() {
 		return borderPolygon;
 	}
-
 	public Point getCenter() {
 		return center;
 	}

@@ -48,7 +48,7 @@ public struct MultiLine : INullable, IBinarySerialize {
 	}
 	[SqlMethod(OnNullCall = false)]
 	public static MultiLine Parse(SqlString sql) {
-		Regex sqlVerifier = new Regex("\\[((\\(\\d+(\\.\\d*)?,\\d+(\\.\\d*)?\\));)+(\\(\\d+(\\.\\d*)?,\\d+(\\.\\d*)?\\))\\]");
+		Regex sqlVerifier = new Regex("\\[((\\(-?\\d+(\\.\\d*)?,-?\\d+(\\.\\d*)?\\));)+(\\(-?\\d+(\\.\\d*)?,-?\\d+(\\.\\d*)?\\))\\]");
         if (!sqlVerifier.IsMatch(sql.Value)) {
 			throw new ArgumentException("Incorrect input format should be [(x1,y1);(x2,y2)...]");
 		}

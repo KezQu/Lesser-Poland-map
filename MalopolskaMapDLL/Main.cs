@@ -9,12 +9,13 @@
 //class Project {
 //	static void Main(string[] args) {
 //		List<MultiLine> mls = new List<MultiLine>();
-//		StreamReader fs = new StreamReader("D:\\Programming\\Java\\BazyDanych2\\MalopolskaMapDLL\\lines.txt");
+//		StreamReader fs = new StreamReader("D:\\Programming\\Java\\BazyDanych2\\Lesser-Poland-map\\MalopolskaMapDLL\\lines.txt");
 //		while (!fs.EndOfStream) {
 //			mls.Add(MultiLine.Parse(fs.ReadLine()));
 //		}
-//		Polygon p = Functions.CreatePolyOutOfUnorderedMultilines(mls);
-//		Console.WriteLine(Functions.IsInside(p, new Point(216, 103)));
-//		Console.WriteLine(Functions.IsInside(p, new Point(220, 110)));
+//		var p = MultiLine.Parse("[(-10.0,10);(-10,5)]");
+//		//Polygon p = Functions.CreatePolyOutOfUnorderedMultilines(mls);
+//		//Console.WriteLine(Functions.IsInside(p, new Point(216, 103)));
+//		//Console.WriteLine(Functions.IsInside(p, new Point(220, 110)));
 //	}
 //}

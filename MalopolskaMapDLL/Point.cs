@@ -7,7 +7,7 @@ using System.Globalization;
 using System.Text.RegularExpressions;
 
 [Serializable]
-[SqlUserDefinedTypeAttribute(Format.Native, IsByteOrdered = true, ValidationMethodName = "Validate")]
+[SqlUserDefinedTypeAttribute(Format.Native, IsByteOrdered = true)] //, ValidationMethodName = "Validate"
 public struct Point : INullable {
 	private bool _Null;
 	private Double _x;
@@ -33,7 +33,7 @@ public struct Point : INullable {
 	}
 	[SqlMethod(OnNullCall = false)]
 	public static Point Parse(SqlString sql) {
-		Regex sqlVerifier = new Regex("(\\(\\d+(\\.\\d*)?,\\d+(\\.\\d*)?\\))");
+		Regex sqlVerifier = new Regex("(\\(-?\\d+(\\.\\d*)?,-?\\d+(\\.\\d*)?\\))");
 		if (!sqlVerifier.IsMatch(sql.Value)) {
 			throw new ArgumentException("Incorrect input format should be (lon,lat) or (x,y)");
 		}
@@ -61,13 +61,15 @@ public struct Point : INullable {
 	}
 	public Double X {
 		get { return this._x; }
-		set { this._x = value < 0 ? throw new ArithmeticException("Provided value is incorrect") : value; }
+		//set { this._x = value < 0 ? throw new ArithmeticException("Provided value is incorrect") : value; }
+		set { this._x = value; }
 	}
 	public Double Y {
 		get { return this._y; }
-		set { this._y = value < 0 ? throw new ArithmeticException("Provided value is incorrect") : value; }
+		//set { this._y = value < 0 ? throw new ArithmeticException("Provided value is incorrect") : value; }
+		set { this._y = value; }
 	}
-	public bool Validate() { return (this._x < 0 || this._y < 0) ? false : true; }
+	public bool Validate() { return true; }
 
 	[SqlMethod(OnNullCall = false)]
 	public Point ConvertFromCoordinates() {

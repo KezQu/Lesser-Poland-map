@@ -3,6 +3,7 @@ package pl.edu.agh.fis.bd2.backend;
 import org.json.JSONObject;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.security.provisioning.UserDetailsManager;
@@ -15,9 +16,18 @@ import org.springframework.web.bind.annotation.RestController;
 import pl.edu.agh.fis.bd2.SecurityConfig;
 import pl.edu.agh.fis.bd2.UserData;
 
+/**
+ * Class providing endpoints for user registering
+ */
 @RestController
 @RequestMapping
 public class UserController extends DatabaseController{
+	/**
+	 * Endpoint that allows to verify provided credentials and to create new user
+	 * @param body Body request containing provided credentials
+	 * @param model Spring boot model that allows to change thymeleaf template
+	 * @return Server response signaling whether user was created successfully or some error was made along the way
+	 */
 	@PostMapping("/register")
 	public ResponseEntity<String> RegisterPost(@RequestBody String body, Model model){
 		UserData createdUser = new UserData();
@@ -41,7 +51,7 @@ public class UserController extends DatabaseController{
 					createdUser.getPassword() + "', '" +
 					createdUser.getRoles() + "';").update();
 		}catch (RuntimeException e){
-			return ResponseEntity.status(HttpStatus.FOUND).headers(headers).body(e.getMessage());
+			return ResponseEntity.status(HttpStatus.BAD_REQUEST).contentType(MediaType.TEXT_PLAIN).body(e.getMessage());
 		}
 		UserDetailsManager userDetailsManager = SecurityConfig.inMemoryUserDetailsManager;
 		userDetailsManager.createUser(User.withDefaultPasswordEncoder()

@@ -14,7 +14,7 @@ RECONFIGURE;
 EXEC sp_configure 'clr strict security', 0;
 RECONFIGURE;
 GO
-DROP FUNCTION IF EXISTS dbo.ScaleArea;
+DROP PROCEDURE IF EXISTS dbo.ScaleArea;
 DROP FUNCTION IF EXISTS dbo.AreaWithRescaledPolygon;
 DROP FUNCTION IF EXISTS dbo.ChangePolygonScale;
 DROP FUNCTION IF EXISTS dbo.Concatenate;

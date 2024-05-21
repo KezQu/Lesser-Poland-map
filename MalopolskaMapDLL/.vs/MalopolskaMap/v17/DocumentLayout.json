@@ -1,40 +1,40 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\Programming\\Java\\BazyDanych2\\MalopolskaMapDLL\\",
+  "WorkspaceRootPath": "D:\\Programming\\Java\\BazyDanych2\\Lesser-Poland-map\\MalopolskaMapDLL\\",
   "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{8564E156-6D78-40EC-B313-A1BA86566F74}|MalopolskaMap.csproj|D:\\Programming\\Java\\BazyDanych2\\MalopolskaMapDLL\\functions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8564E156-6D78-40EC-B313-A1BA86566F74}|MalopolskaMap.csproj|solutionrelative:functions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8564E156-6D78-40EC-B313-A1BA86566F74}|MalopolskaMap.csproj|D:\\Programming\\Java\\BazyDanych2\\MalopolskaMapDLL\\lines.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{8564E156-6D78-40EC-B313-A1BA86566F74}|MalopolskaMap.csproj|solutionrelative:lines.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8564E156-6D78-40EC-B313-A1BA86566F74}|MalopolskaMap.csproj|D:\\Programming\\Java\\BazyDanych2\\MalopolskaMapDLL\\polygon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8564E156-6D78-40EC-B313-A1BA86566F74}|MalopolskaMap.csproj|solutionrelative:polygon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8564E156-6D78-40EC-B313-A1BA86566F74}|MalopolskaMap.csproj|D:\\Programming\\Java\\BazyDanych2\\MalopolskaMapDLL\\main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8564E156-6D78-40EC-B313-A1BA86566F74}|MalopolskaMap.csproj|solutionrelative:main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
     {
       "AbsoluteMoniker": "D:0:0:{00000000-0000-0000-0000-000000000000}|\u003CSolution\u003E|MalopolskaMap||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8564E156-6D78-40EC-B313-A1BA86566F74}|MalopolskaMap.csproj|d:\\programming\\java\\bazydanych2\\malopolskamapdll\\multiline.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8564E156-6D78-40EC-B313-A1BA86566F74}|MalopolskaMap.csproj|solutionrelative:multiline.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8564E156-6D78-40EC-B313-A1BA86566F74}|MalopolskaMap.csproj|D:\\Programming\\Java\\BazyDanych2\\MalopolskaMapDLL\\line.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8564E156-6D78-40EC-B313-A1BA86566F74}|MalopolskaMap.csproj|solutionrelative:line.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8564E156-6D78-40EC-B313-A1BA86566F74}|MalopolskaMap.csproj|D:\\Programming\\Java\\BazyDanych2\\MalopolskaMapDLL\\point.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{8564E156-6D78-40EC-B313-A1BA86566F74}|MalopolskaMap.csproj|D:\\Programming\\Java\\BazyDanych2\\Lesser-Poland-map\\MalopolskaMapDLL\\point.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8564E156-6D78-40EC-B313-A1BA86566F74}|MalopolskaMap.csproj|solutionrelative:point.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8564E156-6D78-40EC-B313-A1BA86566F74}|MalopolskaMap.csproj|d:\\programming\\java\\bazydanych2\\malopolskamapdll\\||{B270807C-D8C6-49EB-8EBE-8E8D566637A1}|5e9a8ac2-4f34-4521-858f-4c248ba31532"
+      "AbsoluteMoniker": "D:0:0:{8564E156-6D78-40EC-B313-A1BA86566F74}|MalopolskaMap.csproj|D:\\Programming\\Java\\BazyDanych2\\Lesser-Poland-map\\MalopolskaMapDLL\\polygon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8564E156-6D78-40EC-B313-A1BA86566F74}|MalopolskaMap.csproj|solutionrelative:polygon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8564E156-6D78-40EC-B313-A1BA86566F74}|MalopolskaMap.csproj|D:\\Programming\\Java\\BazyDanych2\\Lesser-Poland-map\\MalopolskaMapDLL\\main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8564E156-6D78-40EC-B313-A1BA86566F74}|MalopolskaMap.csproj|solutionrelative:main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8564E156-6D78-40EC-B313-A1BA86566F74}|MalopolskaMap.csproj|D:\\Programming\\Java\\BazyDanych2\\Lesser-Poland-map\\MalopolskaMapDLL\\line.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8564E156-6D78-40EC-B313-A1BA86566F74}|MalopolskaMap.csproj|solutionrelative:line.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8564E156-6D78-40EC-B313-A1BA86566F74}|MalopolskaMap.csproj|D:\\Programming\\Java\\BazyDanych2\\Lesser-Poland-map\\MalopolskaMapDLL\\multiline.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8564E156-6D78-40EC-B313-A1BA86566F74}|MalopolskaMap.csproj|solutionrelative:multiline.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8564E156-6D78-40EC-B313-A1BA86566F74}|MalopolskaMap.csproj|d:\\programming\\java\\bazydanych2\\lesser-poland-map\\malopolskamapdll\\functions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8564E156-6D78-40EC-B313-A1BA86566F74}|MalopolskaMap.csproj|solutionrelative:functions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8564E156-6D78-40EC-B313-A1BA86566F74}|MalopolskaMap.csproj|D:\\Programming\\Java\\BazyDanych2\\Lesser-Poland-map\\MalopolskaMapDLL\\lines.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{8564E156-6D78-40EC-B313-A1BA86566F74}|MalopolskaMap.csproj|solutionrelative:lines.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8564E156-6D78-40EC-B313-A1BA86566F74}|MalopolskaMap.csproj|d:\\programming\\java\\bazydanych2\\lesser-poland-map\\malopolskamapdll\\||{B270807C-D8C6-49EB-8EBE-8E8D566637A1}|5e9a8ac2-4f34-4521-858f-4c248ba31532"
     }
   ],
   "DocumentGroupContainers": [
@@ -44,7 +44,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 282,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 11,
           "Children": [
             {
               "$type": "Bookmark",
@@ -64,26 +64,25 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 7,
               "Title": "lines.txt",
-              "DocumentMoniker": "D:\\Programming\\Java\\BazyDanych2\\MalopolskaMapDLL\\lines.txt",
+              "DocumentMoniker": "D:\\Programming\\Java\\BazyDanych2\\Lesser-Poland-map\\MalopolskaMapDLL\\lines.txt",
               "RelativeDocumentMoniker": "lines.txt",
-              "ToolTip": "D:\\Programming\\Java\\BazyDanych2\\MalopolskaMapDLL\\lines.txt",
+              "ToolTip": "D:\\Programming\\Java\\BazyDanych2\\Lesser-Poland-map\\MalopolskaMapDLL\\lines.txt",
               "RelativeToolTip": "lines.txt",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAEAAAA9AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
-              "WhenOpened": "2024-05-15T21:51:21.92Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-15T21:51:21.92Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 6,
               "Title": "Functions.cs",
-              "DocumentMoniker": "D:\\Programming\\Java\\BazyDanych2\\MalopolskaMapDLL\\Functions.cs",
+              "DocumentMoniker": "D:\\Programming\\Java\\BazyDanych2\\Lesser-Poland-map\\MalopolskaMapDLL\\Functions.cs",
               "RelativeDocumentMoniker": "Functions.cs",
-              "ToolTip": "D:\\Programming\\Java\\BazyDanych2\\MalopolskaMapDLL\\Functions.cs",
+              "ToolTip": "D:\\Programming\\Java\\BazyDanych2\\Lesser-Poland-map\\MalopolskaMapDLL\\Functions.cs",
               "RelativeToolTip": "Functions.cs",
-              "ViewState": "AQIAAEIAAAAAAAAAAAAowNoAAAAVAAAA",
+              "ViewState": "AQIAAEIAAAAAAAAAAAAowFYAAAAwAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-17T09:28:00.695Z",
               "EditorCaption": ""
@@ -92,37 +91,37 @@
               "$type": "Document",
               "DocumentIndex": 5,
               "Title": "MultiLine.cs",
-              "DocumentMoniker": "D:\\Programming\\Java\\BazyDanych2\\MalopolskaMapDLL\\MultiLine.cs",
+              "DocumentMoniker": "D:\\Programming\\Java\\BazyDanych2\\Lesser-Poland-map\\MalopolskaMapDLL\\MultiLine.cs",
               "RelativeDocumentMoniker": "MultiLine.cs",
-              "ToolTip": "D:\\Programming\\Java\\BazyDanych2\\MalopolskaMapDLL\\MultiLine.cs",
+              "ToolTip": "D:\\Programming\\Java\\BazyDanych2\\Lesser-Poland-map\\MalopolskaMapDLL\\MultiLine.cs",
               "RelativeToolTip": "MultiLine.cs",
-              "ViewState": "AQIAACoAAAAAAAAAAAAWwDQAAAADAAAA",
+              "ViewState": "AQIAACoAAAAAAAAAAAAWwDIAAABoAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-15T19:40:26.578Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 4,
               "Title": "Line.cs",
-              "DocumentMoniker": "D:\\Programming\\Java\\BazyDanych2\\MalopolskaMapDLL\\Line.cs",
+              "DocumentMoniker": "D:\\Programming\\Java\\BazyDanych2\\Lesser-Poland-map\\MalopolskaMapDLL\\Line.cs",
               "RelativeDocumentMoniker": "Line.cs",
-              "ToolTip": "D:\\Programming\\Java\\BazyDanych2\\MalopolskaMapDLL\\Line.cs",
+              "ToolTip": "D:\\Programming\\Java\\BazyDanych2\\Lesser-Poland-map\\MalopolskaMapDLL\\Line.cs",
               "RelativeToolTip": "Line.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAUAAAA",
+              "ViewState": "AQIAADYAAAAAAAAAAAAEwEQAAAASAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-15T19:40:25.865Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 1,
               "Title": "Point.cs",
-              "DocumentMoniker": "D:\\Programming\\Java\\BazyDanych2\\MalopolskaMapDLL\\Point.cs",
+              "DocumentMoniker": "D:\\Programming\\Java\\BazyDanych2\\Lesser-Poland-map\\MalopolskaMapDLL\\Point.cs",
               "RelativeDocumentMoniker": "Point.cs",
-              "ToolTip": "D:\\Programming\\Java\\BazyDanych2\\MalopolskaMapDLL\\Point.cs",
+              "ToolTip": "D:\\Programming\\Java\\BazyDanych2\\Lesser-Poland-map\\MalopolskaMapDLL\\Point.cs",
               "RelativeToolTip": "Point.cs",
-              "ViewState": "AQIAADwAAAAAAAAAAAAmwAkAAABiAAAA",
+              "ViewState": "AQIAACIAAAAAAAAAAAAxwEcAAAAoAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-15T19:40:27.153Z",
               "EditorCaption": ""
@@ -131,11 +130,11 @@
               "$type": "Document",
               "DocumentIndex": 2,
               "Title": "Polygon.cs",
-              "DocumentMoniker": "D:\\Programming\\Java\\BazyDanych2\\MalopolskaMapDLL\\Polygon.cs",
+              "DocumentMoniker": "D:\\Programming\\Java\\BazyDanych2\\Lesser-Poland-map\\MalopolskaMapDLL\\Polygon.cs",
               "RelativeDocumentMoniker": "Polygon.cs",
-              "ToolTip": "D:\\Programming\\Java\\BazyDanych2\\MalopolskaMapDLL\\Polygon.cs",
+              "ToolTip": "D:\\Programming\\Java\\BazyDanych2\\Lesser-Poland-map\\MalopolskaMapDLL\\Polygon.cs",
               "RelativeToolTip": "Polygon.cs",
-              "ViewState": "AQIAABEAAAAAAAAAAAAQwDoAAAAAAAAA",
+              "ViewState": "AQIAABEAAAAAAAAAAAAQwCYAAABoAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-15T19:40:27.678Z",
               "EditorCaption": ""
@@ -144,23 +143,23 @@
               "$type": "Document",
               "DocumentIndex": 3,
               "Title": "Main.cs",
-              "DocumentMoniker": "D:\\Programming\\Java\\BazyDanych2\\MalopolskaMapDLL\\Main.cs",
+              "DocumentMoniker": "D:\\Programming\\Java\\BazyDanych2\\Lesser-Poland-map\\MalopolskaMapDLL\\Main.cs",
               "RelativeDocumentMoniker": "Main.cs",
-              "ToolTip": "D:\\Programming\\Java\\BazyDanych2\\MalopolskaMapDLL\\Main.cs",
+              "ToolTip": "D:\\Programming\\Java\\BazyDanych2\\Lesser-Poland-map\\MalopolskaMapDLL\\Main.cs",
               "RelativeToolTip": "Main.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAfAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-15T19:40:52.89Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 0,
               "Title": "MalopolskaMap",
-              "DocumentMoniker": "D:\\Programming\\Java\\BazyDanych2\\MalopolskaMapDLL\\MalopolskaMap.csproj",
+              "DocumentMoniker": "D:\\Programming\\Java\\BazyDanych2\\Lesser-Poland-map\\MalopolskaMapDLL\\MalopolskaMap.csproj",
               "RelativeDocumentMoniker": "MalopolskaMap.csproj",
-              "ToolTip": "D:\\Programming\\Java\\BazyDanych2\\MalopolskaMapDLL\\MalopolskaMap.csproj",
-              "RelativeToolTip": "MalopolskaMap.csproj",
+              "ToolTip": "D:\\Programming\\Java\\BazyDanych2\\Lesser-Poland-map\\MalopolskaMapDLL\\MalopolskaMap.csproj*",
+              "RelativeToolTip": "MalopolskaMap.csproj*",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
               "WhenOpened": "2024-05-15T19:40:12.556Z",
               "EditorCaption": ""

@@ -1,10 +1,6 @@
 package pl.edu.agh.fis.bd2;
 
 import jakarta.servlet.DispatcherType;
-import jakarta.servlet.FilterChain;
-import jakarta.servlet.ServletException;
-import jakarta.servlet.http.HttpServletRequest;
-import jakarta.servlet.http.HttpServletResponse;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.jdbc.core.simple.JdbcClient;
@@ -20,16 +16,26 @@ import org.springframework.security.web.authentication.www.BasicAuthenticationFi
 import org.springframework.security.web.csrf.*;
 import org.springframework.security.web.header.writers.ClearSiteDataHeaderWriter;
 import pl.edu.agh.fis.bd2.backend.CsrfCookieFilter;
-import pl.edu.agh.fis.bd2.frontend.SpaCsrfHandler;
+import pl.edu.agh.fis.bd2.backend.SpaCsrfHandler;
 
 import javax.sql.DataSource;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Class providing tools to authenticate users and verify requests
+ */
 @Configuration
 @EnableWebSecurity
 public class SecurityConfig {
 	public static final InMemoryUserDetailsManager inMemoryUserDetailsManager = LoadUsersFromDBtoMemory();
+
+	/**
+	 * Main spring boot filter chain that grants access to the user to specified endpoints as well as provides session management
+	 * @param http Http request to be filtered
+	 * @return Created filter
+	 * @throws Exception Exception occuring while CSRF token filtering fails to build properly
+	 */
 	@Bean
 	public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
 		http
@@ -61,11 +67,20 @@ public class SecurityConfig {
 		;
 		return http.build();
 	}
+
+	/**
+	 * Method exposing in memory database of possible users that can log in
+	 * @return User details
+	 */
 	@Bean
 	public UserDetailsService userDetailsService() {
 		return inMemoryUserDetailsManager;
 	}
 
+	/**
+	 * Method providing custom in memory user database created form MSSQL Server database of users
+	 * @return Generated in memory manager
+	 */
 	private static InMemoryUserDetailsManager LoadUsersFromDBtoMemory(){
 		final DataSource dataSource = DatabaseConfig.dataSource();
 		JdbcClient conn = JdbcClient.create(dataSource);
