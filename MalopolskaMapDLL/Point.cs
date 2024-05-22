@@ -61,12 +61,10 @@ public struct Point : INullable {
 	}
 	public Double X {
 		get { return this._x; }
-		//set { this._x = value < 0 ? throw new ArithmeticException("Provided value is incorrect") : value; }
 		set { this._x = value; }
 	}
 	public Double Y {
 		get { return this._y; }
-		//set { this._y = value < 0 ? throw new ArithmeticException("Provided value is incorrect") : value; }
 		set { this._y = value; }
 	}
 	public bool Validate() { return true; }

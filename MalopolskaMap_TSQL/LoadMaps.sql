@@ -11,7 +11,6 @@ AS MalopolskaMap);
 INSERT INTO Primitives.Point
 SELECT node.value('@id', 'BIGINT') AS id,
 CONVERT(dbo.Point, '(' + node.value('@lon', 'NVARCHAR(20)') + ',' + node.value('@lat', 'NVARCHAR(20)') + ')').ConvertFromCoordinates() AS point
---CONVERT(dbo.Point, '(' + node.value('@lon', 'NVARCHAR(20)') + ',' + node.value('@lat', 'NVARCHAR(20)') + ')') AS point
 FROM @MalopolskaMap.nodes('/osm/node') AS map(node);
 
 PRINT 'Points loaded Successfully'

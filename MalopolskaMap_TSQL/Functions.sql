@@ -1,5 +1,39 @@
 USE MalopolskaMap;
 GO
+CREATE OR ALTER PROCEDURE dbo.CompareProvidedAndBuiltInAreaCalculation AS
+BEGIN
+	SELECT TOP(10)
+	name, geometry::STGeomFromText(
+	REPLACE(REPLACE(REPLACE(REPLACE(borderPolygon.ToString(), ',', ' '), ');(', ', '), '[', 'POLYGON('), ']', ')'),
+	0).MakeValid().STArea() AS BuiltInArea, dbo.Area(borderPolygon) AS OwnArea
+	FROM Areas.AdministrativeArea WHERE borderPolygon IS NOT NULL;
+END
+GO
+CREATE OR ALTER PROCEDURE dbo.CompareProvidedAndBuiltInDistanceCalculation(@beginPoint dbo.Point) AS
+BEGIN
+	SELECT TOP(10)
+	geometry::STGeomFromText(
+	REPLACE('POINT' + @beginPoint.ToString(), ',', ' '),
+	0).STDistance(
+	geometry::STGeomFromText(
+	REPLACE('POINT' + point.ToString(), ',', ' '),
+	0))
+	AS BuiltInDistance, dbo.Distance(@beginPoint, point) AS OwnDistance
+	FROM Primitives.Point WHERE point IS NOT NULL;
+END
+GO
+CREATE OR ALTER PROCEDURE dbo.CompareProvidedAndBuiltInContainsPoint(@searchPoint dbo.Point) AS
+BEGIN
+	SELECT TOP(5)
+	name, geometry::STGeomFromText(
+	REPLACE(REPLACE(REPLACE(REPLACE(borderPolygon.ToString(), ',', ' '), ');(', ', '), '[', 'POLYGON('), ']', ')'),
+	0).MakeValid().STContains(geometry::STGeomFromText(
+	REPLACE('POINT' + @searchPoint.ToString(), ',', ' '),
+	0)) AS BuiltInSearch,
+	dbo.IsInside(borderPolygon, @searchPoint) AS OwnSearch
+	FROM Areas.AdministrativeArea WHERE borderPolygon IS NOT NULL;
+END
+GO
 CREATE OR ALTER FUNCTION dbo.AreaWithRescaledPolygon() RETURNS TABLE AS
 	RETURN
 	(SELECT AA.id, AA.name, AA.name_prefix, AA.population, RA.borderPolygon, AA.admin_centre_id

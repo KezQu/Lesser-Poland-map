@@ -47,13 +47,13 @@ class MapControllerTest {
 	 */
 	@Test
 	public void IsInsideIncorrectBodyTest() throws Exception {
-		mockMvc.perform(post("/voivodeshipborder/isinside").with(csrf()).content(""))
+		mockMvc.perform(post("/operation/isinside").with(csrf()).content(""))
 				.andExpect(status().isBadRequest());
-		mockMvc.perform(post("/voivodeshipborder/isinside").with(csrf()).content("{\"x\":\"asd\",\"y\":10.0}"))
+		mockMvc.perform(post("/operation/isinside").with(csrf()).content("{\"x\":\"asd\",\"y\":10.0}"))
 				.andExpect(status().isBadRequest());
-		mockMvc.perform(post("/voivodeshipborder/isinside").with(csrf()).content("{\"x\":\"10.0\",\"y\":asd}"))
+		mockMvc.perform(post("/operation/isinside").with(csrf()).content("{\"x\":\"10.0\",\"y\":asd}"))
 				.andExpect(status().isBadRequest());
-		mockMvc.perform(post("/voivodeshipborder/isinside").with(csrf()).content("{\"y\":10.0}"))
+		mockMvc.perform(post("/operation/isinside").with(csrf()).content("{\"y\":10.0}"))
 				.andExpect(status().isBadRequest());
 	}
 	/**
@@ -62,10 +62,10 @@ class MapControllerTest {
 	 */
 	@Test
 	public void IsInsideCorrectBodyTest() throws Exception {
-		mockMvc.perform(post("/voivodeshipborder/isinside").with(csrf()).content("{\"x\":10.0,\"y\":10.0}"))
+		mockMvc.perform(post("/operation/isinside").with(csrf()).content("{\"x\":10.0,\"y\":10.0}"))
 				.andExpect(status().isOk())
 				.andExpect(content().contentType(MediaType.APPLICATION_JSON));
-		mockMvc.perform(post("/voivodeshipborder/isinside").with(csrf()).content("{\"x\":\"10.0\",\"y\":10.0, \"z\":asdascxzxc, \"asdcxz\":[]}"))
+		mockMvc.perform(post("/operation/isinside").with(csrf()).content("{\"x\":\"10.0\",\"y\":10.0, \"z\":asdascxzxc, \"asdcxz\":[]}"))
 				.andExpect(status().isOk())
 				.andExpect(content().contentType(MediaType.APPLICATION_JSON));
 	}

@@ -47,12 +47,6 @@ CREATE FUNCTION dbo.Concatenate(@core dbo.MultiLine, @ml dbo.MultiLine) RETURNS 
 GO
 CREATE FUNCTION dbo.ConcatenateInPlace(@core dbo.MultiLine, @ml dbo.MultiLine) RETURNS BIT EXTERNAL NAME MalopolskaMap.Functions.ConcatenateInPlace;
 GO
---CREATE FUNCTION dbo.IntersectLine(@core dbo.Line, @l dbo.Line) RETURNS BIT EXTERNAL NAME MalopolskaMap.Functions.IntersectLine;
---GO
---CREATE FUNCTION dbo.IsInsideLine(@core dbo.Line, @p dbo.Point) RETURNS BIT EXTERNAL NAME MalopolskaMap.Functions.IsInsideLine;
---GO
---CREATE FUNCTION dbo.Direction(@core dbo.Line, @p dbo.Point) RETURNS INT EXTERNAL NAME MalopolskaMap.Functions.Direction;
-GO
 CREATE FUNCTION dbo.Distance(@core dbo.Point, @p dbo.Point) RETURNS FLOAT EXTERNAL NAME MalopolskaMap.Functions.Distance;
 GO
 CREATE FUNCTION dbo.IsInside(@core dbo.Polygon, @p dbo.Point) RETURNS BIT EXTERNAL NAME MalopolskaMap.Functions.IsInside;

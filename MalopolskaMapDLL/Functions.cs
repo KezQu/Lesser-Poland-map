@@ -43,43 +43,6 @@ public class Functions {
 		return true;
 	}
 	/*----------------------------------------------------------------------------------------------------------*/
-	//[SqlFunction(DataAccess = DataAccessKind.Read)]
-	//public static bool IntersectLine(Line core, Line l) {
-	//    int o1 = Direction(core, l.P1);
-	//    int o2 = Direction(core, l.P2);
-	//    int o3 = Direction(l, core.P1);
-	//    int o4 = Direction(l, core.P2);
-
-	//    if (o1 != o2 && o3 != o4)
-	//        return true;
-
-	//    if (o1 == 0 && IsInsideLine(core, l.P1))
-	//        return true;
-	//    if (o2 == 0 && IsInsideLine(core, l.P2))
-	//        return true;
-	//    if (o3 == 0 && IsInsideLine(l, core.P1))
-	//        return true;
-	//    if (o4 == 0 && IsInsideLine(l, core.P2))
-	//        return true;
-
-	//    return false;
-	//}
-	//[SqlFunction(DataAccess = DataAccessKind.Read)]
-	//public static bool IsInsideLine(Line core, Point r) {
-	//    if (core.P2.X <= Math.Max(core.P1.X, r.X) && core.P2.X >= Math.Min(core.P1.X, r.X) &&
-	//        core.P2.Y <= Math.Max(core.P1.Y, r.Y) && core.P2.Y >= Math.Min(core.P1.Y, r.Y)) {
-	//        return true;
-	//    }
-	//    return false;
-	//}
-	//[SqlFunction(DataAccess = DataAccessKind.Read)]
-	//public static int Direction(Line core, Point r) {
-	//    double val = (core.P2.Y - core.P1.Y) * (r.X - core.P2.X) -
-	//                 (core.P2.X - core.P1.X) * (r.Y - core.P2.Y);
-	//    if (val == 0) return 0;
-	//    return (val > 0) ? 1 : 2;
-	//}
-	/*----------------------------------------------------------------------------------------------------------*/
 	[SqlFunction(DataAccess = DataAccessKind.Read)]
 	public static Double Distance(Point core, Point point) {
 		Double squaredDiffx = Math.Pow(core.X - point.X, 2);
@@ -116,20 +79,6 @@ public class Functions {
 			return true;
 		else
 			return false;
-		//if (core.POLYGON.POINTS.Count > 5 && IsInside(GetBoundingBox(core), p) == false) {
-		//    return false;
-		//}
-		//Point farthestNE = new Point(30, 60).ConvertFromCoordinates();
-		//Line horizontal = new Line(p, new Point(farthestNE.X, p.Y));
-		//Line vertical = new Line(p, new Point(p.X, farthestNE.Y));
-		//int Hcounter = 0;
-		//int Vcounter = 0;
-		//for (int i = 0; i < core.POLYGON.POINTS.Count - 1; i++) {
-		//    Line border = new Line(core.POLYGON.POINTS[i], core.POLYGON.POINTS[i + 1]);
-		//    Hcounter += IntersectLine(horizontal, border) ? 1 : 0;
-		//    Vcounter += IntersectLine(vertical, border) ? 1 : 0;
-		//}
-		//return (Hcounter % 2 == 1 && Vcounter % 2 == 1) ? true : false;
 	}
 	[SqlFunction(DataAccess = DataAccessKind.Read)]
 	public static Polygon GetBoundingBox(Polygon core) {
@@ -152,7 +101,6 @@ public class Functions {
 		p.CalcSize();
 		return p;
 	}
-	//TODO: redo to calculate properly with axproximating for 5 next points and exchanging for axproximation
 	[SqlFunction(DataAccess = DataAccessKind.Read)]
 	public static double Area(Polygon core) {
 		double area = 0;
@@ -208,7 +156,6 @@ public class Functions {
 		}
 
 		if (poly.POLYGON.POINTS.First() != poly.POLYGON.POINTS.Last()) {
-			//Console.WriteLine("Provided multilines does not create closed polygon");
 			return Polygon.Null;
 		}
 		poly.CalcSize();

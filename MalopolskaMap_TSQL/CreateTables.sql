@@ -1,8 +1,8 @@
 USE MalopolskaMap;
 GO
---DROP TABLE IF EXISTS UserCred.UserRoles;
---DROP TABLE IF EXISTS UserCred.UserLoginData;
---DROP TABLE IF EXISTS UserCred.Roles;
+DROP TABLE IF EXISTS UserCred.UserRoles;
+DROP TABLE IF EXISTS UserCred.UserLoginData;
+DROP TABLE IF EXISTS UserCred.Roles;
 
 DROP TABLE IF EXISTS Areas.Border;
 DROP TABLE IF EXISTS Areas.SubAreas;
@@ -70,26 +70,26 @@ CREATE TABLE Areas.Border(
 	CONSTRAINT FK_MultiLine FOREIGN KEY (multiline_id) REFERENCES Primitives.MultiLine(id)
 );
 --------------------------------------------------------------------------------------------
---CREATE TABLE UserCred.UserLoginData(
---	id BIGINT IDENTITY(1,1) NOT NULL,
---	email NVARCHAR(200) NOT NULL,
---	password NVARCHAR(200) NOT NULL,
---	CONSTRAINT PK_userID PRIMARY KEY (id),
---	CONSTRAINT UQ_email UNIQUE (email)
---);
-----------------------------------------------------------------------------------------------
---CREATE TABLE UserCred.Roles(
---	id BIGINT IDENTITY(1,1) NOT NULL,
---	role NVARCHAR(100) NOT NULL,
---	CONSTRAINT PK_roleID PRIMARY KEY (id),
---	CONSTRAINT UQ_roleType UNIQUE (role)
---);
-----------------------------------------------------------------------------------------------
---CREATE TABLE UserCred.UserRoles(
---	user_id BIGINT NOT NULL,
---	role_id BIGINT NOT NULL,
---	CONSTRAINT PK_userRole PRIMARY KEY(user_id, role_id),
---	CONSTRAINT FK_userID FOREIGN KEY(user_id) REFERENCES UserCred.UserLoginData(id),
---	CONSTRAINT FK_roleID FOREIGN KEY(role_id) REFERENCES UserCred.Roles(id),
---);
+CREATE TABLE UserCred.UserLoginData(
+	id BIGINT IDENTITY(1,1) NOT NULL,
+	email NVARCHAR(200) NOT NULL,
+	password NVARCHAR(200) NOT NULL,
+	CONSTRAINT PK_userID PRIMARY KEY (id),
+	CONSTRAINT UQ_email UNIQUE (email)
+);
+--------------------------------------------------------------------------------------------
+CREATE TABLE UserCred.Roles(
+	id BIGINT IDENTITY(1,1) NOT NULL,
+	role NVARCHAR(100) NOT NULL,
+	CONSTRAINT PK_roleID PRIMARY KEY (id),
+	CONSTRAINT UQ_roleType UNIQUE (role)
+);
+--------------------------------------------------------------------------------------------
+CREATE TABLE UserCred.UserRoles(
+	user_id BIGINT NOT NULL,
+	role_id BIGINT NOT NULL,
+	CONSTRAINT PK_userRole PRIMARY KEY(user_id, role_id),
+	CONSTRAINT FK_userID FOREIGN KEY(user_id) REFERENCES UserCred.UserLoginData(id),
+	CONSTRAINT FK_roleID FOREIGN KEY(role_id) REFERENCES UserCred.Roles(id),
+);
 --------------------------------------------------------------------------------------------

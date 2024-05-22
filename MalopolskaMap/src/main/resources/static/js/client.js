@@ -190,7 +190,7 @@ async function checkIsInside(){
 		  },
 		  body: JSON.stringify(mouseCoords)
 	};
-	const resPromise = fetch(url + "/voivodeshipborder/isinside", req);
+	const resPromise = fetch(url + "/operation/isinside", req);
 	resetCanvas();
 	drawClickedPoint(JSON.parse(req.body));
 	let details = "";

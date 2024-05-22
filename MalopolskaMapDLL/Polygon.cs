@@ -73,10 +73,10 @@ public struct Polygon : INullable, IBinarySerialize {
 	}
 	public MultiLine POLYGON {
 		get { return this._closedCurve; }
-		set { this._closedCurve = this.Validate() ? throw new ArithmeticException("Provided value is incorrect") : value; }
+		set { this._closedCurve = value.Validate() ? throw new ArithmeticException("Provided value is incorrect") : value; }
 	}
 	public bool Validate() { 
-		return _closedCurve.Validate(); 
+		return _closedCurve.Validate() && _closedCurve.POINTS.Last() == _closedCurve.POINTS.First(); 
 	}
 	public void Read(BinaryReader r) {
 		_closedCurve.Read(r);

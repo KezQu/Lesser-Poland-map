@@ -80,7 +80,7 @@ public struct MultiLine : INullable, IBinarySerialize {
 	}
 	public List<Point> POINTS {
 		get { return this._points; }
-		set { this._points = this.Validate() ? throw new ArithmeticException("Provided value is incorrect") : value; }
+		set { this._points = new MultiLine(value).Validate() ? throw new ArithmeticException("Provided value is incorrect") : value; }
     }
 	public Int32 SIZE {
         get { return this._size; }
